@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugin>
+    <id>com.fr.plugin.mobile.web</id>
+    <name><![CDATA[HTML5移动端展现]]></name>
+    <active>yes</active>
+    <version>10.4.49</version>
+    <env-version>10.0</env-version>
+    <vendor>FineMobile</vendor>
+    <jartime>2019-12-05</jartime>
+    <description><![CDATA[除了原生App展示报表外，提供移动浏览器预览报表,表单以及决策系统的插件，可用于微信,钉钉以及App中集成]]></description>
+    <change-notes>
+        <![CDATA[
+        [2019-11-08]<br/>
+        10.4.49:新增单选按钮组样式功能<br/>
+        10.4.49:新增日历日期样式功能<br/>
+        10.4.49:新增目录插入模板功能<br/>
+        10.4.49:H5支持目录样式插件如标签导航目录等<br/>
+        10.4.49:新增支持组件冻结<br/>
+        10.4.49:原顶部显示的数据点提示，更换为跟随点击位置显示<br/>
+        10.4.49:支持设置不显示数据点提示<br/>
+        10.4.49:新增支持FR.remoteEvaluateAsync<br/>
+        10.4.49:横竖屏、双指缩放、选中激活可以通过属性灵活控制<br/>
+		[2019-06-18]<br/>
+		10.2.25:修复bug<br/>
+		[2019-04-17]<br/>
+		10.2.16:移动端支持FRM边距等设置<br/>
+		10.2.16:支持模板短信插件<br/>
+		10.2.16:支持BI组件自定义排序<br/>
+		10.2.16:支持超链PDF<br/>
+		10.2.16:钻取和联动同时触发<br/>
+		10.2.16:推送的结果报表去掉参数选择<br/>
+		[2019-01-09]<br/>
+		10.1.02:支持BI5.0<br/>
+		10.1.02:移动端扫码控件与文本控件统一<br/>
+		10.1.02:支持FR&BI水印设置并优化水印显示<br/>
+		10.1.02:支持TAB切换JS<br/>
+		10.1.02:支持隐藏TAB标题<br/>
+		10.1.02:新增多种TAB移动端样式<br/>
+		10.1.02:超链联动钻取优化<br/>
+		10.1.02:联动时加载动画优化<br/>
+        ]]>
+    </change-notes>
+    <function-recorder class="com.fr.plugin.mobile.web.server.provider.Html5HttpHandlerProvider"/>
+    <function-recorder class="com.fr.plugin.mobile.web.server.provider.Html5URLAliasProvider"/>
+    <function-recorder class="com.fr.plugin.mobile.web.server.provider.Html5URLRedirectProvider"/>
+    <extra-report>
+        <ActorProvider class="com.fr.plugin.mobile.web.server.provider.Html5PageActorProvider"/>
+    </extra-report>
+    <extra-form>
+        <FormActor class="com.fr.plugin.mobile.web.server.form.Html5FormActor"/>
+    </extra-form>
+    <extra-decision>
+        <HttpHandlerProvider class="com.fr.plugin.mobile.web.server.provider.Html5HttpHandlerProvider"></HttpHandlerProvider>
+        <URLAliasProvider class="com.fr.plugin.mobile.web.server.provider.Html5URLAliasProvider"/>
+        <RequestPreHandleProvider class="com.fr.plugin.mobile.web.server.provider.Html5URLRedirectProvider"/>
+        <WebResourceProvider class="com.fr.plugin.mobile.web.server.provider.Html5WebResourceProvider"/>
+    </extra-decision>
+    <extra-core>
+        <!--插件注入国际化-->
+        <LocaleFinder class="com.fr.plugin.mobile.web.server.provider.Html5LocaleFinder"/>
+    </extra-core>
+</plugin>

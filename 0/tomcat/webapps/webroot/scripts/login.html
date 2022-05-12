@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+<body>
+<div class="login-content">
+    <div class="transition"></div>
+    <div class="default-login">
+        <div class="login-close"></div>
+        <div class="login-title">帆软通行证登录</div>
+        <input class="user-info" type="text" placeholder="用户名/邮箱/手机号" autofocus="autofocus"/>
+        <input id="password" class="password" type="password" placeholder="密码"/>
+        <label class="error-msg"></label>
+        <input class="login-btn" type='button' value="登录"/>
+        <ul>
+            <li>还没有账号？| <a id="register" class="register">立即注册</a></li>
+            <li><a id="forget" class="forget">忘记密码？</a></li>
+        </ul>
+    </div>
+    <!--暂时先隐藏-->
+    <!--<div class="qq-login">-->
+        <!--<div class="quick-login">快捷登录:</div>-->
+        <!--<input class="qq-login-btn" type='button' value="用QQ账号登录"/>-->
+    <!--</div>-->
+</div>
+</body>
+<script type="text/javascript" src="js/lib/jquery-2.2.2.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        assemb.build();
+    });
+</script>
+</html>

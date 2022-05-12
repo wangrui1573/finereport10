@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <id>com.fr.plugin.register.v10</id>
+    <name><![CDATA[帆软授权]]></name>
+    <active>yes</active>
+    <version>10.0</version>
+    <env-version>10.0</env-version>
+    <jartime>2019-10-01</jartime>
+    <vendor>Cracker</vendor>
+    <description><![CDATA[FR10和FBI5.1软件授权插件，通过这个插件授权软件及收费插件]]></description>
+    <change-notes>
+        <![CDATA[
+        [2019-10-10]10.4.61:
+            支持授权FR10.0和BI5.1，以及占95%以上的收费插件<br/>
+        ]]>
+    </change-notes>
+    <extra-decision>
+        <SystemOptionProvider class="com.fr.plugin.register"/>
+    </extra-decision>
+    <function-recorder class="com.fr.plugin.register"/>
+    <main-package>com.fr.plugin</main-package>
+</plugin>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugin>
+    <id>com.fr.plugin.cloud.analytics.v10</id>
+    <name><![CDATA[云端运维]]></name>
+    <active>yes</active>
+    <hidden>yes</hidden>
+    <auto-update>true</auto-update>
+    <version>1.4.0.20210114</version>
+    <env-version>10.0</env-version>
+    <jartime>2020-05-25</jartime>
+    <vendor>finereport</vendor>
+    <description><![CDATA[生成系统运行的日志文件]]></description>
+    <change-notes><![CDATA[
+        [2021-01-14] 1.新增定时任务等埋点  2.修复若干bug <br/>
+        [2020-12-16] 修复若干bug <br/>
+        [2020-12-07] 修复若干bug <br/>
+        [2020-11-23] 1.优化自动更新接口 2.修复若干bug <br/>
+        [2020-08-07] 云端运维界面增加设置通知邮箱，支持设置云端运维报告的通知邮箱，在数据包分析完后，向对应邮箱发送通知邮件 <br/>
+        [2020-06-29] 云端运维插件适配JDK1.7 <br/>
+    ]]></change-notes>
+    <extra-core>
+        <LocaleFinder class="com.fr.plugin.cloud.analytics.base.locale.CloudAnalyticsLocaleFinder"/>
+    </extra-core>
+    <extra-decision>
+        <ControllerRegisterProvider class="com.fr.plugin.cloud.analytics.base.web.CloudAnalyticsControllerBridge"/>
+        <SystemOptionProvider class="com.fr.plugin.cloud.analytics.base.option.CloudAnalyticsOption"/>
+        <StableKeyArgsProvider class="com.fr.plugin.cloud.analytics.base.mutable.CloudAnalyticsMetric"/>
+        <StableKeyArgsProvider class="com.fr.plugin.cloud.analytics.base.mutable.CloudAnalyticsWorkspace"/>
+    </extra-decision>
+    <lifecycle-monitor class="com.fr.plugin.cloud.analytics.base.start.CloudAnalyticsMonitor"/>
+    <function-recorder class="com.fr.plugin.cloud.analytics.web.controller.CloudAnalyticsResource"/>
+</plugin>
